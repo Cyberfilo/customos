@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Personal data (NEVER commit)
+data/
+**/data/
+*.duckdb
+*.sqlite
+*.db
+events.duckdb
+knowledgeC.db
+NoteStore.sqlite
+History.db
+chat.db
+
+# Planning + AI artifacts
+.claude/
+CLAUDE.md
+
+# OS
+.DS_Store
+
+# Env
+.env
+.env.local
