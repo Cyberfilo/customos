@@ -1,0 +1,39 @@
+[project]
+name = "macprofile"
+version = "0.1.0"
+description = "Longitudinal behavioral profile extractor for macOS"
+requires-python = ">=3.12"
+dependencies = [
+    "customos-core",
+    "duckdb>=1.1.0",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "rich>=13.7",
+    "loguru>=0.7",
+    "tqdm>=4.66",
+    "ccl_segb @ git+https://github.com/cclgroupltd/ccl-segb",
+    "bbpb>=1.4.2",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "typer>=0.12",
+    "openai>=1.50",
+    "anthropic>=0.39",
+    "tomli>=2.0; python_version<'3.11'",
+    "python-dateutil>=2.9",
+]
+
+[project.scripts]
+macprofile = "macprofile.app.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["macprofile"]
+
+[tool.uv.sources]
+customos-core = { workspace = true }

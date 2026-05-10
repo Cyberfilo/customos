@@ -1,0 +1,29 @@
+# macprofile config
+
+[paths]
+data_root = "data"           # relative to project root
+raw_dir = "data/raw"
+db_path = "data/events.duckdb"
+output_dir = "output"
+
+[privacy]
+# When false (default): only aggregates and counts go to the LLM, never raw
+# URLs, message bodies, file contents, or email subjects.
+deep_content_analysis = false
+# Salt for hashing contact identifiers. Generated on first run if missing.
+contact_hash_salt = "aa5dd089f36204ac087923785ee86f7e"
+
+[extract]
+# Lookback window for noisy sources. Spotlight, Biome and unified log honour this.
+lookback_days = 365
+# Skip these expensive sources by default; enable explicitly via CLI flag.
+include_unified_log = false
+include_photos_thumbnails = false
+
+[llm]
+# Order of preference. First with a valid API key wins.
+preferred = ["anthropic", "openai"]
+anthropic_model = "claude-sonnet-4-5"
+openai_model = "gpt-5"
+# Cap tokens per analysis call to keep budget predictable.
+max_output_tokens = 16000
