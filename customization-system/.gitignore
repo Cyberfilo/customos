@@ -1,0 +1,4 @@
+# Run-time artefacts (also covered by repo-root .gitignore; duplicated
+# here so per-package checkouts stay clean).
+logs/
+cache/
