@@ -9,6 +9,8 @@ __pycache__/
 # Personal data (NEVER commit)
 data/
 **/data/
+output/
+**/output/
 *.duckdb
 *.sqlite
 *.db
