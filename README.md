@@ -81,8 +81,3 @@ uv run uvicorn customos.api:app --reload # local API for inspecting your profile
 - `profile-extractor/README.md`
 - `customization-system/README.md`
 
-## License
-
-MIT. See `LICENSE`.
-
-This is a personal-data tool. It is your machine, your data, your responsibility.
